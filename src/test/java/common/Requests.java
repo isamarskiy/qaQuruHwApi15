@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
-public class requests {
+public class Requests {
 
      public static Response create(){
         String payload =String.format("{\"name\":\"%s\", \"job\":\"%s\" }", "Testov", "Test");

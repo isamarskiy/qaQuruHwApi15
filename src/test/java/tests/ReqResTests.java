@@ -1,6 +1,6 @@
 package tests;
 
-import common.requests;
+import common.Requests;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -36,7 +36,7 @@ public class ReqResTests extends Base{
         String changingName = "newName";
         String changingJob = "newJob";
         String payload =String.format("{\"name\":\"%s\", \"job\":\"%s\" }", changingName, changingJob);
-        Response response = requests.create();
+        Response response = Requests.create();
         String user_id = response.jsonPath().getString("id");
 
         given()
@@ -52,7 +52,7 @@ public class ReqResTests extends Base{
 
     @Test
     void deleteTest(){
-        Response response = requests.create();
+        Response response = Requests.create();
         String user_id = response.jsonPath().getString("id");
 
         given()
